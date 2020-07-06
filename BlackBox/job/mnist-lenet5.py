@@ -78,7 +78,7 @@ class BatchTimeCallback(tf.keras.callbacks.Callback):
         self.all_times = []
 
     def on_train_end(self, logs=None):
-        time_filename = "/home/ubuntu/Deep-Cloud/tensorstats/times-" + str(args.batch_size) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S") + ".pickle"
+        time_filename = "/home/ubuntu/DNN/BlackBox/tensorstats/times-" + str(args.batch_size) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S") + ".pickle"
         time_file = open(time_filename, 'ab')
         pickle.dump(self.all_times, time_file)
         time_file.close()
@@ -97,7 +97,7 @@ class BatchTimeCallback(tf.keras.callbacks.Callback):
 
 batch_time_callback = BatchTimeCallback()
 
-logs = "/home/ubuntu/Deep-Cloud/logs/"  + str(args.batch_size) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
+logs = "/home/ubuntu/DNN/BlackBox/tensorstats/logs/"  + str(args.batch_size) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
 prof_range = str(args.prof_start_batch) + ',' + str(args.prof_end_batch)
 tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs,
                                                  histogram_freq = 1,
