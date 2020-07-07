@@ -37,7 +37,7 @@ ssh -i awspwd.pem -t ubuntu@$INSTANCE_PUB_DNS $RUN_COMMAND2
 sleep 10
 mkdir $INSTANCE_TYPE
 scp -i awspwd.pem \
-ubuntu@$INSTANCE_PUB_DNS:~/BlackBox/tensorstats/* ./$INSTANCE_TYPE/
+ubuntu@$INSTANCE_PUB_DNS:~/DNN/BlackBox/tensorstats/* ./$INSTANCE_TYPE/
  
 # Terminate Instance
 sleep 10
