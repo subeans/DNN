@@ -1,9 +1,9 @@
 #!/bin/bash
-tensorboard --logdir=./logs &
+tensorboard --logdir=./DNN/BlackBox/tensorstats/logs &
 sleep 5
 
 INSTANCE_TYPE=$1
-NAME_LIST=$(find ./logs -name *.trace.json.gz)
+NAME_LIST=$(find ./DNN/BlackBox/tensorstats/logs/* -name *.trace.json.gz)
 
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/train/"
