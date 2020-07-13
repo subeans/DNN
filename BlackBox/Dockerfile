@@ -6,4 +6,5 @@ COPY . /model
 WORKDIR /model
 
 
-CMD ["/bin/bash","run.sh"]
+CMD ["/bin/bash"]
+
