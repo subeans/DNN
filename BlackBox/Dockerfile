@@ -6,4 +6,4 @@ COPY . /model
 WORKDIR /model
 
 
-CMD ["/bin/bash","run_blackbox.sh"]
+CMD ["/bin/bash","run.sh"]
